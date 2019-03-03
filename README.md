@@ -1,2 +1,6 @@
 # r-india-2019
-R India 2019 Conference
+
+Source for R@IISA 2019 Conference shamelessly hacked from from DE's
+[github repo](https://github.com/eddelbuettel/rf2). 
+
+
