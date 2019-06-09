@@ -84,17 +84,30 @@
         <a href="#coc" class="mdl-layout__tab">COC</a>	      
       </div>
     </header>
+
     <div class="mdl-layout__drawer mdl-layout--small-screen-only">
       <span class="mdl-layout__title">R@IISA</span>
+      <!-- <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font"> -->
+      <!--   <a class="mdl-navigation__link" href="#home">Home</a> -->
+      <!--   <a class="mdl-navigation__link" href="#venue">Venue</a> -->
+      <!--   <a class="mdl-navigation__link" href="#program">Program</a> -->
+      <!-- 	<a class="mdl-navigation__link" href="#registration">Registration</a> -->
+      <!-- 	<\!-- <a class="mdl-navigation__link" href="#scholarships">Scholarships</a> -\-> -->
+      <!--   <a class="mdl-navigation__link" href="#sponsors">Sponsors</a>		 -->
+      <!--   <a class="mdl-navigation__link" href="#coc">Code of conduct</a> -->
+      <!-- </nav> -->
       <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-        <a class="mdl-navigation__link" href="#home">Home</a>
-        <a class="mdl-navigation__link" href="#venue">Venue</a>
-        <a class="mdl-navigation__link" href="#program">Program</a>
-	<a class="mdl-navigation__link" href="#registration">Registration</a>
-	<!-- <a class="mdl-navigation__link" href="#scholarships">Scholarships</a> -->
-        <a class="mdl-navigation__link" href="#sponsors">Sponsors</a>		
-        <a class="mdl-navigation__link" href="#coc">Code of conduct</a>
+        <a class="mdl-navigation__link" onclick="doClick('home')">Home</a>
+        <a class="mdl-navigation__link" onclick="doClick('venue')">Venue</a>
+        <a class="mdl-navigation__link" onclick="doClick('program')">Program</a>
+      	<a class="mdl-navigation__link" onclick="doClick('registration')">Registration</a>
+      	<!-- <a class="mdl-navigation__link" onclick="doClick('scholarships')>Scholarships</a> -->
+        <a class="mdl-navigation__link" onclick="doClick('sponsors')">Sponsors</a>
+        <a class="mdl-navigation__link" onclick="doClick('coc')">Code of conduct</a>
       </nav>
+      </nav>
+
+
     </div>
     <main class="mdl-layout__content">
       <div class="mdl-layout__tab-panel is-active" id="home">
@@ -442,12 +455,14 @@
 	      <p></p>
 	      Please note.
 	      <ul>
+		<li>Awardees will be notified by the Committee and an
+		award amount will be specified.</li>
 		<li>The scholarship will be paid after the conference.</li>
 		<li>The amount refunded will depend on proof of
 		  expense: train or plane tickets, lodging bills,
 		  etc.</li>
-		<li>The amount will be limited to the initial
-		  award.</li>
+		<li>The amount reimbursed will not exceed the awarded
+		  amount.</li>
 		<li>The registration fee will be refunded as part of
 		  the award.</li>
 	      </ul>
@@ -618,6 +633,11 @@
 	      // click link with assoc. href (e.g. '#cfp')
 	      document.querySelector("a[href='#" + afterHastag + "']").click();
 	  }
+      }
+      doClick = function(x) {
+	  var d = document.querySelector('.mdl-layout');
+	  d.MaterialLayout.toggleDrawer()
+	  document.querySelector("a[href='#" + x + "']").click();
       }
     </script>
 </body>
